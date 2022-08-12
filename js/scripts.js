@@ -22,6 +22,7 @@ function findLang(event) {
   const output = findResult(q1, q2, q3, q4, q5);
 
   //something that reveals the correct text
+  console.log(output)
   resultText(output);
 }
 // q1 is gonna have a value, same with each 2-5
@@ -61,12 +62,23 @@ function findResult(a, b, c, d, e) {
       python += 1;
     };
   };
-  console.log("csharp total: " + csharp + " js total: " + js + " python total: " + python);
-  let langList = [csharp + js + python]
-  langList.sort();
-  return langList[2]
+  if (csharp >= js && csharp >= python) {
+    console.log("csharp is highest")
+    return "csharp"
+  } else if (js >= csharp && js >= python) {
+    console.log("js is highest")
+    return "js"
+  } else if (python >= csharp && python >= js) {
+    console.log("pyton is highest")
+    return "python"
+  }
+
+
+  
 }
 
 function resultText() {// take the output of findresult, and just unhide the text
   document.querySelector("results").innerText = output;
+  //I did this wrong it should reveal based on what output is
+  //its currently trying to make something that doesn't exist text
 }
