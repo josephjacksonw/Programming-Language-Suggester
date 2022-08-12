@@ -10,7 +10,6 @@ function findLang(event) {
   const q3 = parseInt(document.getElementById("q3").value);
   const q4 = parseInt(document.getElementById("q4").value);
   const q5 = parseInt(document.getElementById("q5").value);
-  const list = [q1, q2, q3, q4, q5]
   hideResults();
   const output = findResult(q1, q2, q3, q4, q5);
   resultText(output);
