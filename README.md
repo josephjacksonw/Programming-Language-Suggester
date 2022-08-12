@@ -10,7 +10,6 @@
 
 * HTML
 * CSS
-* Bootstrap
 * JavaScript
 
 ## Description

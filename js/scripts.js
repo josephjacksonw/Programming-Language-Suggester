@@ -1,3 +1,43 @@
+// Business Logic
+function hideResults() {
+  document.getElementById("results").setAttribute("class", "hidden");
+  document.getElementById("js").setAttribute("class", "hidden");
+  document.getElementById("python").setAttribute("class", "hidden");
+  document.getElementById("csharp").setAttribute("class", "hidden");
+}
+function findResult(a, b, c, d, e) {
+  const newList = [];
+  newList.push(a);
+  newList.push(b);
+  newList.push(c);
+  newList.push(d);
+  newList.push(e);
+  let csharp = 0;
+  let js = 0;
+  let python = 0;
+  for (let x in newList) {
+    if (newList[x] === 1) {
+      csharp += 1;
+    } else if (newList[x] === 2) {
+      js += 1;
+    } else if (newList[x] === 3) {
+      python += 1;
+    };
+  };
+  if (csharp >= js && csharp >= python) {
+    return "csharp";
+  } else if (js >= csharp && js >= python) {
+    return "js";
+  } else if (python >= csharp && python >= js) {
+    return "python";
+  }
+}
+function resultText(a) {
+  document.getElementById("results").removeAttribute("class");
+  document.getElementById(a).removeAttribute("class");
+}
+// User Interface Logic
+
 window.addEventListener("load", function() {
   const form = document.getElementById("quiz");
   form.addEventListener("submit", findLang);
@@ -15,43 +55,3 @@ function findLang(event) {
   resultText(output);
 }
 
-
-function hideResults() {
-  document.getElementById("results").setAttribute("class", "hidden");
-  document.getElementById("js").setAttribute("class", "hidden");
-  document.getElementById("python").setAttribute("class", "hidden");
-  document.getElementById("csharp").setAttribute("class", "hidden");
-}
-
-function findResult(a, b, c, d, e) {
-  const newList = []
-  newList.push(a)
-  newList.push(b)
-  newList.push(c)
-  newList.push(d)
-  newList.push(e)
-  let csharp = 0
-  let js = 0
-  let python = 0
-  for (let x in newList) {
-    if (newList[x] === 1) {
-      csharp += 1;
-    } else if (newList[x] === 2) {
-      js += 1;
-    } else if (newList[x] === 3) {
-      python += 1;
-    };
-  };
-  if (csharp >= js && csharp >= python) {
-    return "csharp"
-  } else if (js >= csharp && js >= python) {
-    return "js"
-  } else if (python >= csharp && python >= js) {
-    return "python"
-  }
-}
-
-function resultText(a) {
-  document.getElementById("results").removeAttribute("class");
-  document.getElementById(a).removeAttribute("class");
-}
