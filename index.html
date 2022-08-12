@@ -6,42 +6,42 @@
   <script src="js/scripts.js"></script>
 </head>
 <body>
-  <h1>Title</h1>
-  <p>flavor text telling user what to do</p>
+  <h1>Programming Language Selector</h1>
+  <p>Answer these personality questions </p>
   <form id="quiz">
-    whats' your fav drink babe?
+    what's your preferred first date?
     <select id="q1"> 
-      <option value="1">Coffee</option>
-      <option value="2">Tea</option>
-      <option value="3">Kombucha</option>
+      <option value="1">Hiking</option>
+      <option value="2">Carnival</option>
+      <option value="3">Dinner and a movie</option>
     </select>
     <br>
-    2nd question
+    What's your dream employer?
     <select id="q2"> 
-      <option value="1">Coffee</option>
-      <option value="2">Tea</option>
-      <option value="3">Kombucha</option>
+      <option value="1">Windows</option>
+      <option value="2">Twitter</option>
+      <option value="3">Instagram</option>
     </select>
     <br>
-    3rd question
+    What's your favorite part about computers?
     <select id="q3"> 
-      <option value="1">Coffee</option>
-      <option value="2">Tea</option>
-      <option value="3">Kombucha</option>
+      <option value="1">Building applications</option>
+      <option value="2">Making pages look nice</option>
+      <option value="3">Preforming complex calculations</option>
     </select>
     <br>
-    4th question
+    How would you carry about moving a heavy suitcase?
     <select id="q4"> 
-      <option value="1">Coffee</option>
-      <option value="2">Tea</option>
-      <option value="3">Kombucha</option>
+      <option value="1">Use a luggage cart</option>
+      <option value="2">Get a friend to help</option>
+      <option value="3">Carry it yourself</option>
     </select>
     <br>
-    5th question
+    How difficult do you want the language to be to learn?
     <select id="q5">
-      <option value="1"> coffee</option>
-      <option value="2">Tea</option>
-      <option value="3">Kombucha</option>
+      <option value="3"> easy</option>
+      <option value="2"> medium</option>
+      <option value="1"> hard</option>
     </select>
     <br><br>
     <button type="submit" class="button">Find My Language!</button>
@@ -49,19 +49,21 @@
 
   <div id="results" class="hidden">
     <h1>Your Determined Programming Language!</h1>
-    <div id="csharp">
-      <h2>C#</h2>
-      <p>c# facts</p>
-    </div>
-    <div id="js">
-      <h2>js</h2>
-      <p>js facts</p>
-    </div>
-    <div id="python">
-      <h2>python</h2>
-      <p>python facts</p>
-    </div>
-
-
   </div>
+  <div id="csharp" class="hidden">
+    <h2>C#</h2>
+    <p>C# is a general-purpose, multi-paradigm programming language.</p>
+  </div>
+  <div id="js" class="hidden">
+    <h2>JavaScript</h2>
+    <p>JavaScript, often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS.
+    </p>
+  </div>
+  <div id="python" class="hidden">
+    <h2>Python</h2>
+    <p>Python is a high-level, interpreted, general-purpose programming language.</p>
+  </div>
+
+
+  
 </body>
